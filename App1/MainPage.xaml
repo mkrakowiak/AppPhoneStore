@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar IsOpen="True" IsSticky="True" Background="Aqua">
+            <AppBarButton Click="appBarButton_Click" Label="Menu" Icon="Forward">
+                <Button.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Name="test" Text="Strona 2" Click="test_Click"/>
+                    </MenuFlyout>
+                </Button.Flyout>
+            </AppBarButton>
+
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Grid Background="#FFF36464">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Moje Radio FM" VerticalAlignment="Top" Height="37" Width="151" FontFamily="Segoe WP Black" FontSize="18.667"/>
+        <Button x:Name="button" Content="Stacja 1" HorizontalAlignment="Left" Margin="72,193,0,0" VerticalAlignment="Top" Background="#33000000" Click="button_Click"/>
+        <Button x:Name="button1" Content="Stacja 2" HorizontalAlignment="Center" Margin="185,193,0,0" VerticalAlignment="Top" Click="button1_Click"/>
+        <Button x:Name="button2" Content="Ulubione Stacje Radiowe&#xD;&#xA;" HorizontalAlignment="Center" VerticalAlignment="Top" Click="button2_Click" Margin="72,74,104,0"/>
+
+    </Grid>
+</Page>
